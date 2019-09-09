@@ -44,7 +44,7 @@ For flashing the HUZZAH via a normal usb cable use the correct sequence of butto
 # Case
 ![case](images/case.jpg) To build the case use the following STL files in this location https://github.com/RoyOltmans/RenoventHR/tree/master/bin/3D%20Models%20STL
 
-I have also added the Fusion 360 (from autodesk) file so you can edit the case (please do not judge my CAD skills).
+I have also added the Fusion 360 (from autodesk https://www.autodesk.com/products/fusion-360/students-teachers-educators) file so you can edit the case (please do not judge my CAD skills).
 
 You will need to get a DIN rail to mount the case on and if you prefer as I do a 5-volt din rail power source. 
 ![DIN_5v_powersupply](images/DIN_5v_powersupply.jpg)
@@ -59,7 +59,7 @@ The primary pcb:
 https://github.com/RoyOltmans/RenoventHR/tree/master/pcb/EAGLE/RenoventHR%20v0.4
 
 I ordered this board on https://www.seeedstudio.com/ was very happy with end result and the price.
-To edit the board you will Eagle (from autodesk https://www.autodesk.com/products/eagle/free-download) you can download this freely.
+To edit the board you will need Eagle (from autodesk https://www.autodesk.com/products/eagle/free-download) you can download this freely.
 
 ![circuit_dbl_sw](images/circuit_dbl_sw.jpg)
 
