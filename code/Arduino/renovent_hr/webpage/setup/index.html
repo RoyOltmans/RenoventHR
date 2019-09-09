@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<meta charset=\"utf-8\">
+<meta name=\"apple-mobile-web-app-capable\" content=\"yes\" />
+<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\">
+<meta name=\"viewport\" content=\"width=device-width, user-scalable=no\">
+
+<title>Renovent HR - WiFi</title>
+<link rel=\"stylesheet\" href=\"http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css\" />
+<link rel=\"stylesheet\" href=\"http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css\">
+<script src=\"http://code.jquery.com/jquery-1.6.4.min.js\"></script>
+<script src=\"http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js\"></script>
+ 
+<SCRIPT>
+var xmlHttp=createXmlHttpObject();
+var wtwState;
+function createXmlHttpObject(){
+ if(window.XMLHttpRequest){
+    xmlHttp=new XMLHttpRequest();
+ }else{
+    xmlHttp=new ActiveXObject('Microsoft.XMLHTTP');
+ }
+ return xmlHttp;
+}
+
+function process(){
+   document.getElementById(\"networks_found\").innerHTML=\"...scanning networks...\"
+ if(xmlHttp.readyState==0 || xmlHttp.readyState==4){
+   xmlHttp.open('get','/networks',true);
+   xmlHttp.onreadystatechange=handleServerResponse; 
+   xmlHttp.send(null);
+ }
+}
+function handleServerResponse(){
+ if(xmlHttp.readyState==4 && xmlHttp.status==200){
+   jsonResponse = JSON.parse(xmlHttp.responseText);
+   var selectBox = document.getElementById(\"listbox_networks\");
+       selectBox.innerHTML = \"\";
+   for (var i = 0; i < jsonResponse.Networks.length; i++) {
+       var counter = jsonResponse.Networks[i].SSID;
+       var RSSI = jsonResponse.Networks[i].RSSI;
+       var signalQuality = 0;
+       switch (true) {
+          case (RSSI <= -100): signalQuality=0; break;
+          case (RSSI >= -50): signalQuality=100; break;
+          default: signalQuality=2*(RSSI+100); break;
+       }
+       var hasOption = $('#listbox_networks option[value=\"' + jsonResponse.Networks[i].SSID + '\"]');
+       if (hasOption.length == 0) {
+          var option = document.createElement('option');
+              option.text = jsonResponse.Networks[i].SSID +\" (\"+signalQuality+\"%)\";
+              option.value = jsonResponse.Networks[i].SSID;
+              selectBox.add(option, 0);
+       }
+   }  
+   document.getElementById(\"networks_found\").innerHTML=selectBox.length+\" networks found\
+ }
+}
+</SCRIPT>
+          
+<BODY onload='process()'>
+<div data-role=\"header\" data-position=\"inline\">
+<h1>Renovent HR</h1>
+</div>
+<div class=\"ui-body ui-body-a\">
+<BR>Using this webpage you can change the WiFi configuration settings of the Renovent HR.<BR><BR>
+</div>
+<div class=\"ui-body ui-group-theme-a\">
+<label>SSID: </label><input name='ssid' id='ssid' length=32 value='"+(String)APssid+"'><br>
+<label>Passphrase: </label><input name='pass' id='pass' length=64 type='password' value='"+(String)APpassword+"'><br>
+<label>MQTT broker (optional): </label><input name='mqtt' id='mqtt' length=32 value='"+(String)mqtt_server+"'>
+<button onclick=\"save()\">Save</button>
+<center><A id='saved'></A></center>
+<br>
+<hr>
+Feel free to select a network that I found (why type if you can be lazy?).
+<select id='listbox_networks' onchange='listboxUpdate(this)'></select>
+<button onclick=\"process()\" id='scan_networks'>Scan networks</button>
+<center><A id='networks_found'></A></center>
+</font>
+</div>
+<SCRIPT>
+function listboxUpdate(dropdownlistNetworks) {
+   var selectedText = dropdownlistNetworks.options[dropdownlistNetworks.selectedIndex].innerHTML;
+   var selectedValue = dropdownlistNetworks.value;
+   document.getElementById('ssid').value=selectedValue;
+   document.getElementById('pass').value='';
+}
+function save() {
+   $.post('/save', { ssid: document.getElementById('ssid').value,
+                     pass: document.getElementById('pass').value,
+                     mqtt: document.getElementById('mqtt').value} );
+   document.getElementById(\"saved\").innerHTML=\"New configuration saved\
+}
+</SCRIPT>
+</BODY>
+</HTML>
