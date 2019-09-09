@@ -1,0 +1,31 @@
+Partlist
+
+Exported from Schematic.sch at 18/12/2017 21:08
+
+EAGLE Version 8.4.0 Copyright (c) 1988-2017 Autodesk, Inc.
+
+Assembly variant: 
+
+Part     Value          Device       Package       Library    Sheet
+
+CN1                     USBTHM       USB-MINIB-THM adafruit   1
+D1       1N4004         1N4004       DO41-10       diode      1
+D2       1N4004         1N4004       DO41-10       diode      1
+IC1      MCP23008/P     MCP23008/P   DIL18         adafruit   1
+JP_DOWN                 PINHD-1X2    1X02          pinhead    1
+JP_LCD                  PINHD-1X4    1X04          pinhead    1
+JP_MODE                 PINHD-1X2    1X02          pinhead    1
+JP_UP                   PINHD-1X2    1X02          pinhead    1
+JP_WTW                  PINHD-1X6    1X06          pinhead    1
+R1       330            R-EU_0207/10 0207/10       resistor   1
+R2       330            R-EU_0207/10 0207/10       resistor   1
+R3       330            R-EU_0207/10 0207/10       resistor   1
+R4       330            R-EU_0207/10 0207/10       resistor   1
+R5       1K             R-EU_0207/10 0207/10       resistor   1
+R6       330            R-EU_0207/10 0207/10       resistor   1
+R7       330            R-EU_0207/10 0207/10       resistor   1
+RELAY_1  HJR-4102-L     HJR-4102-L   HJR4102       relay      1
+RELAY_2  HJR1-2C        HJR1-2C      HJR1-2C       hjr1-2c    1
+T1       BC547          BC547        TO92          transistor 1
+T2       BC547          BC547        TO92          transistor 1
+U$1      HUZZAHFTDI     HUZZAHFTDI   HUZZAH-FULL   tobias     1
