@@ -44,7 +44,9 @@ For flashing the HUZZAH via a normal usb cable use the correct sequence of butto
 # Case
 ![case](images/case.jpg) To build the case use the following STL files in this location https://github.com/RoyOltmans/RenoventHR/tree/master/bin/3D%20Models%20STL
 
-You will need to get a DIN rail to mount the case on an if you prefer as I do a 5-volt din rail power source. 
+I have also added the Fusion 360 (from autodesk) file so you can edit the case (please do not judge my CAD skills).
+
+You will need to get a DIN rail to mount the case on and if you prefer as I do a 5-volt din rail power source. 
 ![DIN_5v_powersupply](images/DIN_5v_powersupply.jpg)
 
 See Mean Well DR-15-5 DIN-rail 5 V/DC2.4A 12W (https://s.click.aliexpress.com/e/mliRreY0)
@@ -56,10 +58,16 @@ To build the project firstly you need to order the PCB design via for example se
 The primary pcb:
 https://github.com/RoyOltmans/RenoventHR/tree/master/pcb/EAGLE/RenoventHR%20v0.4
 
+I ordered this board on https://www.seeedstudio.com/ was very happy with end result and the price.
+To edit the board you will Eagle (from autodesk https://www.autodesk.com/products/eagle/free-download) you can download this freely.
+
 ![circuit_dbl_sw](images/circuit_dbl_sw.jpg)
 
 The double switch pcb:
 https://github.com/RoyOltmans/RenoventHR/tree/master/pcb/Fritzing/Double%20Tactile%20Switch%20v0.3
+
+I ordered this board directly via the tool, also very good service, price and quick (https://aisler.net/partners/fritzing).
+To edit this board you will need fritzing you can download this for free (https://fritzing.org/home/).
 
 # Tools
 Personally, I solder with a soldering tip Pencil shape size 0.4 mm, this worked perfectly. 
