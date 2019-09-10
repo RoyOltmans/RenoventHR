@@ -75,36 +75,41 @@ Every connector PCB printed text should be horizontally aligned to number the pi
 
 LCD pinlayout
 ```
-  PCB JP_LCD
-
- 1   2   3   4
- |   |   |   |
-VCC GND SCL SDA
-
+-----------------
+JP_LCD PINS
+Pin   1   2   3   4
+      |   |   |   |
+Pin  VCC GND SCL SDA
 Connected to LCD 
+-----------------
 ```
 Switch Pinlayout
 ```
-JP_UP
-    1         2 
-    |         |
-           Left Pin
-JP_1 DBL SW PCB
- 
-JP_DOWN
-    1         2 
-    |         |
-Center Pin  Right Pin
-JP_1 DBL SW PCB
+-----------------
+JP_UP PINS:
+
+Pin    1         2 
+       |         |
+Pin    -     Left Pin
+JP_1 on DBL SW PCB
+-----------------
+JP_DOWN PINS
+Pin    1         2 
+       |         |
+Pin Center Pin  Right Pin
+JP_1 on DBL SW PCB
+-----------------
 ```
 
 WTW RJ12 connector
 ```
-JP_WTW
+-----------------
+JP_WTW PINS
   1     2    3    4      5    6
   |     |    |    |      |    |
 White Black Red Green Yellow Blue
 RJ12 Color coding
+-----------------
 ```
 
 # Tools
