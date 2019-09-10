@@ -69,6 +69,44 @@ https://github.com/RoyOltmans/RenoventHR/tree/master/pcb/Fritzing/Double%20Tacti
 I ordered this board directly via the tool, also very good service, price and quick (https://aisler.net/partners/fritzing).
 To edit this board you will need fritzing you can download this for free (https://fritzing.org/home/).
 
+# Pinlayout
+
+Every connector PCB printed text should be horizontally aligned to number the pins, pin 1 itterating every pin plus 1 afterwards are the pin numbers.
+
+LCD pinlayout
+```
+  PCB JP_LCD
+
+ 1   2   3   4
+ |   |   |   |
+VCC GND SCL SDA
+
+Connected to LCD 
+```
+Switch Pinlayout
+```
+JP_UP
+    1         2 
+    |         |
+           Left Pin
+JP_1 DBL SW PCB
+ 
+JP_DOWN
+    1         2 
+    |         |
+Center Pin  Right Pin
+JP_1 DBL SW PCB
+```
+
+WTW RJ12 connector
+```
+JP_WTW
+  1     2    3    4      5    6
+  |     |    |    |      |    |
+White Black Red Green Yellow Blue
+RJ12 Color coding
+```
+
 # Tools
 Personally, I solder with a soldering tip Pencil shape size 0.4 mm, this worked perfectly. 
 
