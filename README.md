@@ -1,4 +1,13 @@
 # RenoventHR
+
+All rights of the Mechenical ventelation system are owned by Renovent.
+
+This is a reverse engeneered control device to remotely control and automate ventilation at home.
+
+Usage of this project is on your own risk.
+
+# Motivation
+
 Connected RenoventHR Module to switch a mechanical ventilation heat recovery system from Renovent HR.
 
 ![renovent_hr](images/renovent_hr.jpg)
