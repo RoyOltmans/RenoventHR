@@ -10,15 +10,15 @@ This is a reverse engeneered control device to remotely control and automate ven
 
 Some screenshot of the final endresult
 
-![renovent_hr](images/home_case.jpg)
+![home_case](images/home_case.jpg)
 
 Bottom view case
 
-![renovent_hr](images/top_case.jpg)
+![top_case](images/top_case.jpg)
 
 Side view case
 
-![renovent_hr](images/bottom_case.jpg)
+![bottom_case](images/bottom_case.jpg)
 
 Bottom view case
 
@@ -205,8 +205,8 @@ title: Mechinical Ventilation
 type: entities
 ```
 
-Below a screenshot of the card for 
-
+Below a screenshot of the card in Home Assistant.
+![ha card](images/ha_card.jpg)
 
 Once you have added the fan you can control the fan levels via sesnors and automations you have designed yourself. Ingmar also described a way to add a notification for cleaning the filters. Please see his tutorial for further info.
 
