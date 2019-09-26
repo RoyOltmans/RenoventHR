@@ -174,7 +174,8 @@ After you have done this on older version of HA you need to edit ui-lovelace.yam
 
 In ui-lovelace.yaml you will need to add the following below `resources`
 ```
-  - url: /local/fan-control-entity-row.js                                                                                                   type: js
+  - url: /local/fan-control-entity-row.js
+    type: js
 ```
 
 If this does not work you can try to open the raw editor of lovelace and add the following at the top: 
