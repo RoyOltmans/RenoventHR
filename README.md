@@ -172,7 +172,8 @@ wget https://raw.githubusercontent.com/RoyOltmans/RenoventHR/master/code/Home%20
 
 After you have done this on older version of HA you need to edit ui-lovelace.yaml (this does not work if you created a lovelace interactive version.
 
-In ui-lovelace.yaml you will need to add the following below `resources`                                                                 ```
+In ui-lovelace.yaml you will need to add the following below `resources`
+```
   - url: /local/fan-control-entity-row.js                                                                                                   type: js
 ```
 
