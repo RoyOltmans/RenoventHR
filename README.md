@@ -6,6 +6,22 @@ This is a reverse engeneered control device to remotely control and automate ven
 
 **Usage of this project is on your own risk.**
 
+# Results
+
+Some screenshot of the final endresult
+
+![renovent_hr](images/home_case.jpg)
+
+Bottom view case
+
+![renovent_hr](images/top_case.jpg)
+
+Side view case
+
+![renovent_hr](images/bottom_case.jpg)
+
+Bottom view case
+
 # Motivation
 
 Connected RenoventHR Module to switch a mechanical ventilation heat recovery system from Renovent HR.
