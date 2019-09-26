@@ -192,7 +192,7 @@ wget https://raw.githubusercontent.com/RoyOltmans/RenoventHR/master/code/Home%20
 
 Onze you have done all these staps restart home assistant fully, this will reload and add the fan control of the WTW via MQTT.
 
-Onze you have finished this you can add the following card to your lovelace dashboad. You can do this by toggling the editor and adding a card manualy.
+Onze you have finished this you can add the following card to your lovelace dashboad. You can do this by toggling the editor and adding a card manualy via the lovelace configurator in HA.
 
 ```
 entities:
@@ -205,7 +205,11 @@ title: Mechinical Ventilation
 type: entities
 ```
 
-Once started you will enter a 
+Below a screenshot of the card for 
+
+
+Once you have added the fan you can control the fan levels via sesnors and automations you have designed yourself. Ingmar also described a way to add a notification for cleaning the filters. Please see his tutorial for further info.
+
 # Configuration and Software
 For configurations, you can follow the description on https://www.ingmarverheij.com/built-smart-heat-recovery-system/
 The software as written by Ingmar is still operational, you can interact directly with the device. Or you can couple it through a smart hub via MQTT as described above.
