@@ -158,6 +158,52 @@ Be careful I changed the MQTT paths and these are accessible via the config file
 #define MQTT_Standard_Topic Base_Topic Gateway_Name
 ```
 
+After some tinkering I have decided to add a short totorial of the implementation in Home Assistant. Notice you will MQTT to get this fully operational.
+
+I am using a older version of **HA version 0.86.4**. *Be aware this can work differently on your version of HA.*
+
+Firstly you will need to upload a javascript in to the `www` folder of the configuration root of home-assistant (your .yaml are also located here). If this folder does not exist create it. 
+
+On linux you can do the following steps:
+```
+mkdir www
+wget https://raw.githubusercontent.com/RoyOltmans/RenoventHR/master/code/Home%20Assistant/www/fan-control-entity-row.js
+```
+
+After you have done this on older version of HA you need to edit ui-lovelace.yaml (this does not work if you created a lovelace interactive version.
+
+In ui-lovelace.yaml you will need to add the following below `resources`                                                                   ```
+  - url: /local/fan-control-entity-row.js                                                                                                   type: js
+```
+
+If this does not work you can try to open the raw editor of lovelace and add the following at the top: 
+```
+resources:
+  - type: js
+    url: /local/fan-control-entity-row.js
+```
+
+Once your finished add a new file to the configuration root of home assistant. Use the follwoing command for that
+```
+wget https://raw.githubusercontent.com/RoyOltmans/RenoventHR/master/code/Home%20Assistant/fan.yaml
+```
+
+Onze you have done all these staps restart home assistant fully, this will reload and add the fan control of the WTW via MQTT.
+
+Onze you have finished this you can add the following card to your lovelace dashboad. You can do this by toggling the editor and adding a card manualy.
+
+```
+entities:
+  - customTheme: true
+    entity: fan.wtw_mechanic_ventilation
+    name: WTW Renovent HR
+    type: 'custom:fan-control-entity-row'
+    show_header_toggle: false
+title: Mechinical Ventilation
+type: entities
+```
+
+Once started you will enter a 
 # Configuration and Software
 For configurations, you can follow the description on https://www.ingmarverheij.com/built-smart-heat-recovery-system/
 The software as written by Ingmar is still operational, you can interact directly with the device. Or you can couple it through a smart hub via MQTT as described above.
