@@ -160,7 +160,9 @@ Be careful I changed the MQTT paths and these are accessible via the config file
 
 After some tinkering I have decided to add a short totorial of the implementation in Home Assistant. Notice you will MQTT to get this fully operational.
 
-I am using a older version of **HA version 0.86.4**. *Be aware this can work differently on your version of HA.*
+Firstly I must give credits to **Ingmar Verheij** for researching the HA connectivity and the custom fan card support for HA by **finity69x2**, see his github for the original JS script *https://github.com/finity69x2/fan-control-entity-row*.
+
+To start of, I am using a older version of **HA version 0.86.4**. *Be aware this can work differently on your version of HA.*
 
 Firstly you will need to upload a javascript in to the `www` folder of the configuration root of home-assistant (your .yaml are also located here). If this folder does not exist create it. 
 
